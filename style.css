@@ -1,19 +1,39 @@
-#header{
-    background-color: aqua;
+#header {
+  background-color: aqua;
 }
 
-
-#BannerCTA{
-    background-color: bisque;}
-#videoembed{
-    width: 100%;
-    height: 50%;
+#ContenedorBanner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20%;
+}
+#BannerCTA {
+  background-color: bisque;
+  width: 100%;
+  height: 20%;
 }
 
-#footer{
-    background-color: blue;
+.card-wrapper{
+    display: flex;
 }
 
-#contactus{
-    background-color: aqua;
+.card{
+    margin: 1%;
+    width: calc(100%/3);
+}
+
+#videoembed {
+  width: 100%;
+  height: 50%;
+}
+
+#footer {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+
+#contactus {
+  background-color: aqua;
 }
