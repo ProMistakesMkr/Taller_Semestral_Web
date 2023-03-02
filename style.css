@@ -1,6 +1,57 @@
 #header {
-  background-color: aqua;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  margin-bottom: 10px;
+
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
 }
+
+.buttonBuyAndSearchHeader {
+  display: flex;
+  position: absolute;
+  margin-right: 30px;
+  right: 0;
+  gap: 20px;
+}
+
+#logoButton {
+  width: 100%;
+}
+
+
+.acordeonSection{
+  width: 100%;
+  padding-top: 100px;
+}
+
+.ulAcordeon {
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.liAcordeon{
+  float: left;
+  width: 16%;
+}
+
+.liAcordeon:hover {
+  width: 50%;
+}
+
+.linkAcordeon{
+  height: 100px;
+}
+
+.acordeonTitle{
+  position: absolute;
+  bottom: 0; 
+  margin-right: 100px; 
+}
+
 
 #ContenedorBanner {
   display: flex;
@@ -8,19 +59,20 @@
   width: 100%;
   height: 20%;
 }
+
 #BannerCTA {
   background-color: bisque;
   width: 100%;
   height: 20%;
 }
 
-.card-wrapper{
-    display: flex;
+.card-wrapper {
+  display: flex;
 }
 
-.card{
-    margin: 1%;
-    width: calc(100%/3);
+.card {
+  margin: 1%;
+  width: calc(100%/3);
 }
 
 #videoembed {
