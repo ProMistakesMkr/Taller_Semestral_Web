@@ -21,6 +21,85 @@
   width: 100%;
 }
 
+.primary-button {
+  padding: 10px 24px;
+  color: rgb(0, 0, 0);
+  background-color: #1dd800;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  transition: 0.5s;
+  Justify-content: center;
+}
+
+.primary-button:hover {
+  background-color: rgb(0, 133, 47);
+  color: white;
+}
+
+#BannerIntroduction {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 200px;
+}
+
+#button-introduction{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+}
+
+#BannerHistory{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+#branch_presentation{
+  margin: 0;
+  height: 100%;
+}
+
+#branch_presentation img {
+  height: 100%;
+}
+
+p{
+  padding: 150px;
+  text-align: start;
+}
+
+
+#button-history{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#BannerCarousel{
+  width: 100%;
+  height: 800px;
+  padding: 100px;
+  align-items: center;
+}
+
+.carousel, .carousel-inner > .carousel-item > img {
+  height: 700px;
+}
+
 
 .acordeonSection{
   width: 100%;
