@@ -1,3 +1,13 @@
+h1 {
+  color: rgb(30, 30, 30);
+  text-align: center;
+  font-size: 59pt;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
 #header {
   width: 100%;
   position: fixed;
@@ -20,6 +30,7 @@
 #logoButton {
   width: 100%;
 }
+
 
 .primary-button {
   padding: 10px 24px;
@@ -45,9 +56,10 @@
   justify-content: flex-start;
   align-items: center;
   padding: 200px;
+  
 }
 
-#button-introduction{
+#button-introduction {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -56,7 +68,7 @@
   padding: 30px;
 }
 
-#BannerHistory{
+#BannerHistory {
   width: 100%;
   height: 500px;
   display: flex;
@@ -66,7 +78,7 @@
   padding: 50px;
 }
 
-#branch_presentation{
+#branch_presentation {
   margin: 0;
   height: 100%;
 }
@@ -75,13 +87,13 @@
   height: 100%;
 }
 
-p{
+p {
   padding: 150px;
   text-align: start;
 }
 
 
-#button-history{
+#button-history {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -89,19 +101,20 @@ p{
   align-items: center;
 }
 
-#BannerCarousel{
+#BannerCarousel {
   width: 100%;
   height: 800px;
   padding: 100px;
   align-items: center;
 }
 
-.carousel, .carousel-inner > .carousel-item > img {
+.carousel,
+.carousel-inner>.carousel-item>img {
   height: 700px;
 }
 
 
-.acordeonSection{
+.acordeonSection {
   width: 100%;
   padding-top: 100px;
 }
@@ -112,7 +125,7 @@ p{
   margin: 0 auto;
 }
 
-.liAcordeon{
+.liAcordeon {
   float: left;
   width: 16%;
 }
@@ -121,14 +134,14 @@ p{
   width: 50%;
 }
 
-.linkAcordeon{
+.linkAcordeon {
   height: 100px;
 }
 
-.acordeonTitle{
+.acordeonTitle {
   position: absolute;
-  bottom: 0; 
-  margin-right: 100px; 
+  bottom: 0;
+  margin-right: 100px;
 }
 
 
