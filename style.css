@@ -109,18 +109,6 @@ p {
   align-items: center;
 }
 
-#BannerCarousel {
-  width: 100%;
-  height: 800px;
-  padding: 100px;
-  align-items: center;
-}
-
-.carousel,
-.carousel-inner>.carousel-item>img {
-  height: 700px;
-}
-
 
 .acordeonSection {
   width: 100%;
