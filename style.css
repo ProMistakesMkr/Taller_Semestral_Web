@@ -63,7 +63,6 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 200px;
 
 }
 
@@ -95,7 +94,7 @@
   height: 100%;
 }
 
-p {
+.text{
   padding: 150px;
   text-align: start;
 }
