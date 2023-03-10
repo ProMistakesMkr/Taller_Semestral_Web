@@ -27,7 +27,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
+        </script>
 </head>
 
 <body>
@@ -140,9 +140,10 @@
     <!--Banner CTA-->
 
     <section class="row" id="ContenedorBanner">
-        <canvas class="column" id="BannerCTA">
+        <div class="column" id="BannerCTA">
             <img src="src/imgs grano/BannerCTA.png" alt="">
-        </canvas>
+            
+        </div>
     </section>
 
     <!--Clothing carrousel-->
@@ -299,14 +300,37 @@
 
     <!--Footer-->
     <footer class="row" id="footer">
-        <div class="col">
-            <h2>Social</h2>
+        <div class="col" id="footerColumn">
+            <h2 id="footerTitle">ABOUT OUR STORE</h2>
+            <p>Use this text area to tell your customers about your brand and vision. You can change it in the theme
+                editor.</p>
+
+            <p>WeedGreen</p>
         </div>
-        <div class="col" id="contactus">
-            <h2>contact us</h2>
+        <div class="col" id="footerColumn">
+            <h2 id="footerTitle">POLÍTICAS</h2>
+            <ul>
+                <li>Términos & Condiciones</li>
+                <li>Envíos</li>
+            </ul>
         </div>
-        <div class="col" id="aboutUs">
-            <h2>About Us</h2>
+        <div class="col" id="footerColumn">
+            <h2 id="footerTitle">NEWSLETTER</h2>
+            <p>Suscríbete para recibir lanzamientos, descuentos, y contenido curado para nuestros lectores.</p>
+            <section id="buttonEmail">
+                <input id="inputEmail" type="Su e-mail">
+                <button>enviar</button>
+            </section>
+        </div>
+        <div class="col" id="footerColumn">
+            <h2 id="footerTitle">FOLLOW US</h2>
+            <p>Síguenos en nuestras redes sociales</p>
+            <section id="socialLinks">
+                <img src="src/Social/instagram.png" alt="">
+                <img src="src/Social/youtube.png" alt="">
+            </section>
+            <button id="social1"></button>
+            <button id="social2"></button>
         </div>
     </footer>
     <script src="" async defer></script>
