@@ -218,11 +218,6 @@
   flex-direction: row;
 }
 
-<<<<<<< HEAD
-#contactus {
-  background-color: aqua;
-}
-=======
 #footerColumn {
   background-color: rgb(160, 44, 44);
   display: flex;
@@ -253,4 +248,3 @@
   font-size: 80%;
   color: #ffffff;
 }
->>>>>>> 169d55df93f58f94534f064820bf4f5bac802ea4
