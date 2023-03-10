@@ -1,5 +1,5 @@
 .tittlesH1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 30pt;
   font-weight: 800;
   color: rgb(30, 30, 30);
@@ -11,9 +11,8 @@
   text-align: left;
   font-size: 15pt;
   font-weight: 400;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 
 #header {
   width: 100%;
@@ -23,9 +22,8 @@
 
   justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
-
 
 .buttonBuyAndSearchHeader {
   display: flex;
@@ -39,7 +37,6 @@
   width: 100%;
 }
 
-
 .primary-button {
   padding: 10px 24px;
   color: rgb(0, 0, 0);
@@ -48,7 +45,7 @@
   border: none;
   border-radius: 8px;
   transition: 0.5s;
-  Justify-content: center;
+  justify-content: center;
 }
 
 .primary-button:hover {
@@ -63,7 +60,6 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
 }
 
 #button-introduction {
@@ -99,7 +95,6 @@
   text-align: start;
 }
 
-
 #button-history {
   width: 100%;
   display: flex;
@@ -107,7 +102,6 @@
   justify-content: flex-start;
   align-items: center;
 }
-
 
 .acordeonSection {
   width: 100%;
@@ -135,7 +129,7 @@
 }
 
 .acordeonTitle {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 40pt;
   font-weight: 900;
   color: rgb(255, 255, 255);
@@ -144,7 +138,6 @@
   bottom: 2%;
   margin-right: 100px;
 }
-
 
 #ContenedorBanner {
   display: flex;
@@ -165,7 +158,7 @@
 
 .card {
   margin: 1%;
-  width: calc(100%/3);
+  width: calc(100% / 3);
 }
 
 /* SIBLING FADE: desvanecer hermanos alrededor de un elemento rondado */
@@ -176,35 +169,34 @@
 }
 
 /* Vuelve a mostrar los elementos secundarios, aunque el elemento principal esté "oculto". */
-.sibling-fade>* {
+.sibling-fade > * {
   visibility: visible;
 }
 
 /* Hace que los desvanecimientos sean suaves con un ligero retardo para evitar saltos cuando el ratón se mueve entre los elementos. */
-.sibling-fade>* {
+.sibling-fade > * {
   transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
 }
 
 /* Desvanecimiento de todos los elementos al pasar el ratón por encima del elemento principal */
-.sibling-fade:hover>* {
+.sibling-fade:hover > * {
   opacity: 0.4;
   transform: scale(0.9);
 }
 
 /* Desvanecimiento del elemento sobre el que se pasa el ratón */
-.sibling-fade>*:hover {
+.sibling-fade > *:hover {
   opacity: 1;
   transform: scale(1);
   transition-delay: 0ms, 0ms;
 }
-
 
 .sibling-fade {
   display: flex;
   flex-wrap: wrap;
 }
 
-.sibling-fade>* {
+.sibling-fade > * {
   background: white;
   padding: 1em;
   flex: auto;
@@ -226,6 +218,39 @@
   flex-direction: row;
 }
 
+<<<<<<< HEAD
 #contactus {
   background-color: aqua;
 }
+=======
+#footerColumn {
+  background-color: rgb(160, 44, 44);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#buttonEmail {
+  display: flex;
+  flex-direction: row;
+}
+
+#inputEmail {
+}
+
+#socialLinks{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  padding: 2px;
+  margin: 5px;
+}
+
+#footerTitle {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 80%;
+  color: #ffffff;
+}
+>>>>>>> 169d55df93f58f94534f064820bf4f5bac802ea4
