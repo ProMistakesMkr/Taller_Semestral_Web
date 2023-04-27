@@ -78,36 +78,47 @@ function addTocomentarioArray() {
 
 function deleteComment(index) {
     let currentId = singleProduct;
-    let currentProduct = productsList.find(data => data.num == currentId);
+    let currentProduct = productsList.find((data) => data.num == currentId);
     let comentarioArray = currentProduct.comentarioArray || [];
     comentarioArray.splice(index, 1);
     currentProduct.comentarioArray = comentarioArray;
 
     let outputList = document.getElementById('comentario-list');
-
     outputList.innerHTML = '';
+
     comentarioArray.forEach((item, i) => {
         let li = document.createElement('li');
-        let nameProfile = document.createElement('p');
-        let imgProfile = document.createElement('img');
-        imgProfile.setAttribute('src', 'https://www.daysoftheyear.com/wp-content/uploads/international-cat-day1-scaled.jpg');
-        imgProfile.classList.add('image-profile');
-        imgProfile.style.width = '50px';
-        imgProfile.style.height = '50px';
-        nameProfile.innerHTML = "Lacho"
-        li.innerText = item;
+        li.classList.add('comentario-item');
 
-        // create a delete button and add it to the li element
+        let imgProfile = document.createElement('img');
+        imgProfile.setAttribute(
+            'src',
+            'https://www.daysoftheyear.com/wp-content/uploads/international-cat-day1-scaled.jpg'
+        );
+        imgProfile.classList.add('image-profile');
+
+        let nameProfile = document.createElement('p');
+        nameProfile.innerHTML = 'Lacho';
+        nameProfile.classList.add('name-profile');
+
+        let content = document.createElement('p');
+        content.innerHTML = item;
+        content.classList.add('comentario-content');
+
         let deleteButton = document.createElement('button');
-        deleteButton.innerHTML = 'Delete';
+        deleteButton.innerHTML = 'Eliminar';
         deleteButton.onclick = () => deleteComment(i);
+        deleteButton.classList.add('delete-button');
+
+        li.appendChild(imgProfile);
+        li.appendChild(nameProfile);
+        li.appendChild(content);
         li.appendChild(deleteButton);
 
-        outputList.appendChild(imgProfile);
-        outputList.appendChild(nameProfile);
         outputList.appendChild(li);
     });
 }
+
 
 
 
