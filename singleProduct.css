@@ -267,3 +267,86 @@ h2 {
 
   color: #707070;
 }
+
+
+
+
+.comentario-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.image-profile {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.name-profile {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.comentario-content {
+  flex: 1;
+  font-size: 14px;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Estilos para la lista de comentarios */
+#comentario-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para cada comentario */
+#comentario-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la imagen de perfil */
+.image-profile {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Estilos para el nombre de perfil */
+p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Estilos para el comentario */
+li span {
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+/* Estilos para el botón de eliminar comentario */
+button {
+  background-color: black;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+

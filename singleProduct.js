@@ -13,49 +13,66 @@ const productoPorSeparado = productsList.find(data =>
 /////
 
 function addTocomentarioArray() {
+    // Obtener el texto de entrada del usuario
+    const inputText = document.getElementById('comentario-input').value.trim();
 
-    let inputText = document.getElementById('comentario-input').value;
-
+    // Limpiar el campo de entrada del usuario
     document.getElementById('comentario-input').value = '';
 
+    // Mostrar un mensaje de error si el usuario no ingresó nada
     if (inputText === '') {
         document.getElementById('error-message').style.display = 'block';
-
-    } else {
-        document.getElementById('error-message').style.display = 'none';
-        let currentId = singleProduct;
-        let currentProduct = productsList.find(data => data.num == currentId);
-        let comentarioArray = currentProduct.comentarioArray || [];
-        comentarioArray.push(inputText);
-        currentProduct.comentarioArray = comentarioArray;
-
-        let outputList = document.getElementById('comentario-list');
-
-        outputList.innerHTML = '';
-        comentarioArray.forEach((item, i) => {
-            let li = document.createElement('li');
-            let nameProfile = document.createElement('p');
-            let imgProfile = document.createElement('img');
-            imgProfile.setAttribute('src', 'https://www.daysoftheyear.com/wp-content/uploads/international-cat-day1-scaled.jpg');
-            imgProfile.classList.add('image-profile');
-            imgProfile.style.width = '100px';
-            imgProfile.style.height = '100px';
-            nameProfile.innerHTML = "Lacho"
-            li.innerText = item;
-
-            // create a delete button and add it to the li element
-            let deleteButton = document.createElement('button');
-            deleteButton.innerHTML = 'Delete';
-            deleteButton.onclick = () => deleteComment(i);
-            li.appendChild(deleteButton);
-
-            outputList.appendChild(imgProfile);
-            outputList.appendChild(nameProfile);
-            outputList.appendChild(li);
-        });
-        console.log(productsList);
+        return;
     }
+
+    // Ocultar el mensaje de error
+    document.getElementById('error-message').style.display = 'none';
+
+    // Obtener el ID del producto actual y su lista de comentarios
+    const currentId = singleProduct;
+    const currentProduct = productsList.find((data) => data.num == currentId);
+    const comentarioArray = currentProduct.comentarioArray || [];
+
+    // Agregar el nuevo comentario a la lista de comentarios
+    comentarioArray.push(inputText);
+    currentProduct.comentarioArray = comentarioArray;
+
+    // Mostrar todos los comentarios, incluido el nuevo
+    const outputList = document.getElementById('comentario-list');
+    outputList.innerHTML = '';
+    comentarioArray.forEach((item, i) => {
+        const li = document.createElement('li');
+        li.classList.add('comentario-item');
+
+        const imgProfile = document.createElement('img');
+        imgProfile.setAttribute(
+            'src',
+            'https://www.daysoftheyear.com/wp-content/uploads/international-cat-day1-scaled.jpg'
+        );
+        imgProfile.classList.add('image-profile');
+
+        const nameProfile = document.createElement('p');
+        nameProfile.innerHTML = 'Lacho';
+        nameProfile.classList.add('name-profile');
+
+        const content = document.createElement('p');
+        content.innerHTML = item;
+        content.classList.add('comentario-content');
+
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = 'Eliminar';
+        deleteButton.onclick = () => deleteComment(i);
+        deleteButton.classList.add('delete-button');
+
+        li.appendChild(imgProfile);
+        li.appendChild(nameProfile);
+        li.appendChild(content);
+        li.appendChild(deleteButton);
+
+        outputList.appendChild(li);
+    });
 }
+
 
 
 
