@@ -2,16 +2,19 @@
 const filter_tipo_prenda = document.getElementById("filter_tipo_prenda");
 const filter_tipo_material = document.getElementById("filter_tipo_material");
 const filter_tipo_seccion = document.getElementById("filter_tipo_seccion");
+const filter_tipo_sexo = document.getElementById("filter_tipo_sexo");
 
 filter_tipo_prenda.addEventListener("change", (e) => {filtrado()});
 filter_tipo_material.addEventListener("change", (e) => {filtrado()});
 filter_tipo_seccion.addEventListener("change", (e) => {filtrado()});
+filter_tipo_sexo.addEventListener("change", (e) => {filtrado()});
 
 function filtrado () {
 let filtradoDeProductos = [...productsList];
 const tipo_prenda = filter_tipo_prenda.value || "";
 const tipo_material = filter_tipo_material.value || "";
 const tipo_seccion = filter_tipo_seccion.value || "";
+const tipo_sexo = filter_tipo_sexo.value || "";
 productosDestacados.innerHTML = "";
 
 
@@ -35,11 +38,18 @@ if(tipo_seccion === "SECCION" || tipo_seccion === "Todo"){
     filtros["seccion"] = tipo_seccion
 }
 
+if(tipo_sexo === "SEXO" || tipo_sexo === "Todo"){
+    filtrado_productos
+} else {
+    filtros["sexo"] = tipo_sexo
+}
+
 const filtracion = filtradoDeProductos.filter(
     p => {
         return ((filtros['tipo_prenda']? p.tipo === filtros['tipo_prenda']: true) &&
                 (filtros['material']? p.material === filtros['material']: true) &&
-                (filtros['seccion']? p.tipo2 === filtros['seccion']: true)
+                (filtros['seccion']? p.coleccion === filtros['seccion']: true) &&
+                (filtros['sexo']? p.sexo === filtros['sexo']: true)
         )
     }
 )
