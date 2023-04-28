@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Syncopate&display=swap");
-sass source/stylesheets/index.scss build/stylesheets/index.css
 
 * {
   box-sizing: border-box;
@@ -171,8 +170,8 @@ sass source/stylesheets/index.scss build/stylesheets/index.css
 }
 
 .card_figure > img {
-  margin-bottom: 10px;
-  border-radius: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
   height: 100%;
   width: 100%;
 }
@@ -180,7 +179,7 @@ sass source/stylesheets/index.scss build/stylesheets/index.css
 .card_article {
   justify-content: center;
   align-items: center;
-  align-content: center;
+  align-content: flex-end;
 }
 
 .texto_precio {
@@ -197,7 +196,7 @@ h2 {
   font-size: 15px;
   font-weight: 400;
 
-  color: #8e8e8e;
+  color: #00b17f;
 }
 
 h5 {

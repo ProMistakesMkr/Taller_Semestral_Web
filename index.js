@@ -1,3 +1,23 @@
+import * as componentes from "./componentes/index.js"
+class AppContainer extends HTMLElement{
+    constructor (){
+        super();
+        this.attachShadow({mode:'open'})
+    }
+
+    connectedCallback(){
+        this.render();
+    }
+
+    render(){
+        this.shadowRoot.innerHTML = `
+        <app-header class="componet"></app-header>
+        `
+    }
+}
+customElements.define('app-container', AppContainer)
+
+
 const tablet = 768;
 const desktop = 1000;
 
