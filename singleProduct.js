@@ -35,6 +35,7 @@ function addTocomentarioArray() {
 
     // Agregar el nuevo comentario a la lista de comentarios
     comentarioArray.push(inputText);
+    document.getElementById("message-container").style.display = 'none';
     currentProduct.comentarioArray = comentarioArray;
 
     // Mostrar todos los comentarios, incluido el nuevo
@@ -125,9 +126,7 @@ function deleteComment(index) {
 const productosLink = document.getElementById("productos");
 productosLink.innerHTML = "";
 productosLink.innerHTML =
-
     /* productosLink.innerHTML +=  */
-
     `<section class="card_list">
     <figure class= "card_figure"><img class= "card_img" src="${productoPorSeparado.imagenProducto}"></figure>
     <article class="card_article">
@@ -141,10 +140,33 @@ productosLink.innerHTML =
         <h3>Comentarios</h3>
         <input type="text" id="comentario-input"></input>
         <button id="comentario-button" onclick="addTocomentarioArray()">Enviar comentario</button>
-        <div id="error-message" style="display: none; color: red;">Please enter a value</div>
+        <div id="error-message" style="display: none; color: red;">Por favor ingrese un texto</div>
         <div id = "comentario-list">
         </div>
-       
-
-    </article>
+        <div id = "comentarioRobot-list"></div>
+        <div id="message-container" style="display: block;">No hay comentarios</div>
+    
+        </article>
 </section>`
+
+let commentPreDiv = document.createElement('div');
+let commentList = "<ul>";
+productoPorSeparado.comments.forEach(comment => {
+
+    if (productoPorSeparado.comments.length === 0) {
+    } else {
+        document.getElementById('message-container').style.display = 'none';
+
+        commentList += `
+    <li class= "comentarioRobotList">
+    <img class="userRobotImg" src="${comment.profileUrl}" />
+      <p class= "userRobotName">${comment.name}</p>
+      <p class= "userRobotComment">${comment.comment}</p>
+    </li>
+  `;
+    }
+});
+commentList += "</ul>";
+commentPreDiv.innerHTML = commentList;
+const comentarioRobot = document.getElementById('comentarioRobot-list');
+comentarioRobot.appendChild(commentPreDiv);

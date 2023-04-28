@@ -348,3 +348,158 @@ button {
   font-size: 1rem;
   cursor: pointer;
 }
+
+.comentarioRobotList {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/*comentarios*/
+.userRobotImg {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.userRobotName {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.userRobotComment {
+  flex: 1;
+  font-size: 14px;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+
+  /* CONFIGURACION DE LA BARRA DE NAVEGACION */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+
+  .navbar-burger-icon,
+  .navbar-search-icon,
+  .navbar-shop-icon,
+  .navbar-user-icon {
+    margin: 10px;
+  }
+
+  .cont-menu {
+    width: 100%;
+    transform: translate(-100%);
+  }
+
+  .active {
+    transform: translate(0);
+  }
+
+  .cont-menu ul li {
+    font-size: 20px;
+  }
+
+  /* Configuracion de la visualización de los productos */
+  .card_list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card_figure {
+    margin-left: 0;
+  }
+
+  .card_article {
+    margin: 30px 0;
+  }
+
+  /* Seccion footer de le página */
+  .pie-de-pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primera-parte,
+  .tercera-parte {
+    margin: 20px 0;
+  }
+
+  .column-logo {
+    margin-top: 0;
+  }
+
+  .column-por-logo {
+    margin-left: 0;
+  }
+
+  .column-1-footer {
+    justify-content: center;
+  }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+
+  /* CONFIGURACION DE LA BARRA DE NAVEGACION */
+  .navbar-item {
+    font-size: 12px;
+  }
+
+  .cont-menu {
+    width: 400px;
+  }
+
+  /* Configuracion de la visualización de los productos */
+  .card_list {
+    flex-wrap: wrap;
+  }
+
+  .card_figure {
+    margin: 20px;
+  }
+
+  /* Seccion footer de le página */
+  .primera-parte,
+  .tercera-parte {
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .column-1-footer {
+    justify-content: space-around;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 961px) {
+
+  /* CONFIGURACION DE LA BARRA DE NAVEGACION */
+  .navbar-item {
+    font-size: 14px;
+  }
+
+  /* Configuracion de la visualización de los productos */
+  .card_list {
+    justify-content: space-around;
+  }
+
+  .card_figure {
+    margin-left: 20px;
+  }
+
+  /* Seccion footer de le página */
+  .primera-parte,
+  .tercera-parte {
+    justify-content: space-between;
+  }
+}
