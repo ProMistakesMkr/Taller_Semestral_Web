@@ -1,4 +1,6 @@
 
+
+
 const filter_tipo_prenda = document.getElementById("filter_tipo_prenda");
 const filter_tipo_material = document.getElementById("filter_tipo_material");
 const filter_tipo_seccion = document.getElementById("filter_tipo_seccion");
@@ -78,7 +80,10 @@ function mostrar(productsList) {
             <h3 class="texto_precio">${producto.precio}</h3>
             <h5> ${producto.material}</h5>
         </article>
-    </a>`
+    </a>
+    
+    
+    `
     
     })
 }

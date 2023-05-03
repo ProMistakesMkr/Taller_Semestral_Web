@@ -1,4 +1,4 @@
-import getData from "../../json"   
+import getData from "../../json.js"   
 
 let list = [];
 
@@ -21,12 +21,9 @@ class firstComponent extends HTMLElement {
 
 render(){
     this.shadowRoot.innerHTML =`
-    <link rel="stylesheet" href="./components/firstComponent/componentExample.css">
+    <link rel="stylesheet" href="./componentes/firstComponent/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-            `;
+ `;
     list.forEach((item)=>{
 
         this.shadowRoot.innerHTML +=`            
@@ -39,8 +36,8 @@ render(){
         </div>
         <div class="card-content">
             <h3>${item.item}</h3>
-            <p>$ ${item.precio} COP</p>
-            <p>$ ${item.coleccion} COP</p>
+            <p>${item.precio} COP</p>
+            <p>${item.coleccion}</p>
             <button class="add-to-cart">
                 Add To Cart
             </button>

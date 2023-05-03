@@ -4,7 +4,7 @@
     border: none;
     outline: none;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
    /* background-color: #555;*/
 }
@@ -48,12 +48,6 @@ body {
     transition: .4s ease;
 }
 
-/*.card:hover .card-image img {
-    transform: scale(1.02)
-               rotate(-3deg)
-               translateX(-5px);
-}*/
-
 .card .card-image svg {
     cursor: pointer;
     position: absolute;
@@ -85,12 +79,12 @@ body {
     color: #fff;
     width: 100%;
     height: 50px;
-    font-family: "Oswald";
+    font-family: "Poppins";
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
     border-radius: 10px;
-    background: rgb(14, 14, 14);
+    background: #00b17f;
 }
 
 @media (max-width: 1280px) {
