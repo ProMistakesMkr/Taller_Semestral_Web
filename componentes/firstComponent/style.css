@@ -11,7 +11,7 @@
 
 body {
     height: 100vh;
-    background: #f4f7f8;
+    background: #ffffff;
 }
 
 .container {
@@ -40,24 +40,13 @@ body {
     padding: 0 0px;
     border-radius: 12px;
     text-align: center;
-    background: #f4f7f8;
+    background: #ffffff;
 }
 
 .card .card-image img {
     width: 100%;
     transition: .4s ease;
-}
-
-.card .card-image svg {
-    cursor: pointer;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    padding: 10px;
-    color: #f7ae04;
-    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .04);
 }
 
 .card .card-content h3 {
@@ -86,6 +75,7 @@ body {
     border-radius: 10px;
     background: #00b17f;
 }
+
 
 @media (max-width: 1280px) {
     body {
