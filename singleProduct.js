@@ -75,8 +75,6 @@ function addTocomentarioArray() {
 }
 
 
-
-
 function deleteComment(index) {
     let currentId = singleProduct;
     let currentProduct = productsList.find((data) => data.num == currentId);
@@ -118,7 +116,13 @@ function deleteComment(index) {
 
         outputList.appendChild(li);
     });
+
+    if (comentarioArray.length === 0) {
+        document.getElementById("message-container").style.display = 'block';
+    }
 }
+
+
 
 
 
@@ -153,8 +157,7 @@ let commentPreDiv = document.createElement('div');
 let commentList = "<ul>";
 productoPorSeparado.comments.forEach(comment => {
 
-    if (productoPorSeparado.comments.length === 0) {
-    } else {
+    if (productoPorSeparado.comments.length === 0) {} else {
         document.getElementById('message-container').style.display = 'none';
 
         commentList += `
