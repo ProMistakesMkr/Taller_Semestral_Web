@@ -28,6 +28,7 @@
   flex-direction: row;
 }
 
+
 .navbar-item {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -119,92 +120,29 @@
   margin-top: 100px;
 }
 
-/* ----------------------------------------------------------------------------------------------- */
-
-/* CONFIGURACION DE LA LISTA DE PRODUCTOS */
-
-.products_discover {
-  width: 100%;
-}
-
-#productos_destacados {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 35px;
-
-  width: 100%;
-  padding-bottom: 45px;
-  margin-inline: 16px;
-}
-
-.lista_productos_destacados {
+.filtros_productos {
   padding-top: 40px;
   width: 100%;
 }
 
-.card_fil {
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-
+.filter_list {
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  padding: 20px;
-  stroke: rgb(236, 236, 236);
-  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
-    0 0 0 1px rgb(10 10 10 / 2%);
-  max-width: 100%;
-  position: relative;
-  margin: 20px;
+  margin-right: 20px;
 }
 
-.card_figure {
+.texto_filtros {
+  justify-content: flex-start;
+  margin-left: 100px;
+  padding-top: 80px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  height: 300px;
 }
 
-.card_figure > img {
-  margin-bottom: 15px;
-  border-radius: 5px;
-  height: 100%;
-  width: 100%;
-}
 
-.card_article {
-  justify-content: center;
-  align-items: center;
-  align-content: flex-end;
-}
+/* ----------------------------------------------------------------------------------------------- */
 
-.texto_precio {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800px;
-  font-size: 20px;
+/* CONFIGURACION DE LA LISTA DE PRODUCTOS */
 
-  color: #1abf04;
-}
-
-h2 {
-  margin-top: 15px;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-
-  color: #00b17f;
-}
-
-h5 {
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-
-  color: #8e8e8e;
-}
 
 .texto_guia_filtrado {
   background-color: #1abf04;
@@ -220,31 +158,6 @@ h5 {
   color: #ffffff;
 }
 
-.navbar-item {
-  color: #ffffff;
-}
-
-.navbar-item1 {
-  color: #1d1d1d;
-  display: block;
-  line-height: 1.5;
-  padding: 0.5rem 0.75rem;
-  position: relative;
-  justify-content: center;
-}
-
-.filter_list {
-  border-radius: 10px;
-  margin-right: 20px;
-}
-
-.texto_filtros {
-  justify-content: flex-start;
-  margin-left: 100px;
-  padding-top: 80px;
-  display: flex;
-  flex-direction: row;
-}
 
 /* ----------------------------------------------------------------------------- */
 /* Seccion footer de le página */
@@ -440,9 +353,6 @@ h5 {
       justify-content: center;
       background-color: #1abf04;
       border-radius: 10px;
-      /* padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 5px; */
       font-family: 'Poppins', sans-serif;
       font-size: 14px;
       font-weight: 400;

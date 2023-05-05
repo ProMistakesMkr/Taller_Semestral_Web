@@ -17,15 +17,19 @@ class firstComponent extends HTMLElement {
     attributeChangeCallback(propName, oldValue, newValue){
         this[propName] = newValue;
         this.printData();
+        
 }
 
+
 render(){
+    this.shadowRoot.style = "display: flex; flex-direction: row; flex-wrap: wrap;"
     this.shadowRoot.innerHTML =`
     <link rel="stylesheet" href="./componentes/firstComponent/style.css">
  `;
     list.forEach((item)=>{
 
-        this.shadowRoot.innerHTML +=`            
+        this.shadowRoot.innerHTML +=`  
+        <a href= './singleProduct.html?id=${item.num}' class="card_fil">          
         <div class="container">
     
     <div class="card">
@@ -41,6 +45,7 @@ render(){
             </button>
         </div>
     </div> 
+    </a>
         `;
     })
 }

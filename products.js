@@ -12,7 +12,7 @@ filter_tipo_seccion.addEventListener("change", (e) => {filtrado()});
 filter_tipo_sexo.addEventListener("change", (e) => {filtrado()});
 
 function filtrado () {
-let filtradoDeProductos = [...productsList];
+let filtradoDeProductos = [...list];
 const tipo_prenda = filter_tipo_prenda.value || "";
 const tipo_material = filter_tipo_material.value || "";
 const tipo_seccion = filter_tipo_seccion.value || "";
