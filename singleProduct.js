@@ -168,6 +168,8 @@ commentPreDiv.innerHTML = commentList;
 const comentarioRobot = document.getElementById("comentarioRobot-list");
 comentarioRobot.appendChild(commentPreDiv);
 
+
+
 // get the size selector element
 const sizeSelector = document.getElementById("size-selector");
 
