@@ -1,4 +1,4 @@
-/*const productsList = [{
+const productsList = [{
     num: 1,
     imagenProducto: "https://cdn.shopify.com/s/files/1/0019/1863/1981/products/camibusopastatras_500x.jpg?v=1679359618",
     item: "Hoodie con cierre past self azul",
@@ -330,4 +330,4 @@
     sexo: "unisex",
     comments: []
   },
-];*/
+];
