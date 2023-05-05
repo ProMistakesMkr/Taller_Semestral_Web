@@ -6,8 +6,21 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-   /* background-color: #555;*/
+    text-decoration: none;
+
 }
+
+.card-wrapper {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 14.3em;
+}
+
+
 
 body {
     height: 100vh;
@@ -20,6 +33,10 @@ body {
 }
 
 .card {
+    display: flex;
+   flex-direction: column;
+   height: 100%;
+   position: relative;
     width: min-content;
     padding: 20px;
     margin: 0 20px;
