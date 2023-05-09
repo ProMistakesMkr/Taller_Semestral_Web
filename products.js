@@ -1,3 +1,4 @@
+import getData from "./json";
 
 
 
@@ -65,7 +66,9 @@ mostrar();
 
 const productosDestacados = document.getElementById("productos_destacados");
 let filtrado_productos = productsList;
-mostrar(productsList);
+
+getData().then((a)=>{filtrado_productos = a
+    mostrar(filtrado_productos)})
 
 function mostrar(productsList) {
     productsList.forEach((producto) => {
