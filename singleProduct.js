@@ -150,8 +150,7 @@ productosLink.innerHTML =
 let commentPreDiv = document.createElement("div");
 let commentList = "<ul>";
 productoPorSeparado.comments.forEach((comment) => {
-  if (productoPorSeparado.comments.length === 0) {
-  } else {
+  if (productoPorSeparado.comments.length === 0) {} else {
     document.getElementById("message-container").style.display = "none";
 
     commentList += `
