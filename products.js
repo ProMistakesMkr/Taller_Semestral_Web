@@ -1,7 +1,8 @@
-import getData from "./json";
+//import getData from "./json";
 
-import { getProdcuts } from './firebase.js'
-
+import {
+    getProdcuts
+} from './firebase.js'
 
 const filter_tipo_prenda = document.getElementById("filter_tipo_prenda");
 const filter_tipo_material = document.getElementById("filter_tipo_material");
@@ -73,34 +74,33 @@ function filtrado() {
 
 let products = []
 await retrieveProducts()
-renderProducts()
 
 
 async function retrieveProducts() {
     products = await getProdcuts()
+    mostrar(products)
 }
-
+/*
 function renderProducts() {
     const container = document.querySelector('#products-container')
     console.log("siii🐜")
-
 }
 
 
-const productosDestacados = document.getElementById("productos_destacados");
 let filtrado_productos = productsList;
 
 getData().then((a) => {
     filtrado_productos = a
     mostrar(filtrado_productos)
-})
-
+})*/
 function mostrar(productsList) {
+    const productosDestacados = document.getElementById("productos_destacados");
+
     productsList.forEach((producto) => {
 
         productosDestacados.innerHTML +=
 
-            `<a href= './singleProduct.html?id=${producto.num}' class="card_fil">
+            `<a href= './singleProduct.html?id=${producto.id}' class="card_fil">
         <figure class= "card_figure"><img class= "card_img" src="${producto.imagenProducto}"></figure>
         <article class="card_article">
             <h2>${producto.item}</h2>
@@ -110,8 +110,6 @@ function mostrar(productsList) {
         </article>
     </a>
     
-    
     `
-
     })
 }
