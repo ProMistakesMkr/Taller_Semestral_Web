@@ -3,7 +3,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebas
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+} from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
 /* import { getFirestore } from "firebase/firestore"; */
 
 // Your web app's Firebase configuration
@@ -25,11 +30,7 @@ console.log("firebase inicio");
 
 /* const db = getFirestore(app); */
 
-
 console.log("firebase firestore");
-
-
-
 
 export async function addProduct(genero, material, producto, tipo_prenda) {
   try {
@@ -44,3 +45,17 @@ export async function addProduct(genero, material, producto, tipo_prenda) {
     console.error("Error adding document: ", e);
   }
 }
+
+export async function getAllproducts() {
+  const querySnapshot = await getDocs(collection(db, "Botanica"));
+  const mappedArray = [];
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+    mappedArray.push(doc.data());
+  });
+
+  return mappedArray;
+}
+
+console.log("hola FIrebase final");
