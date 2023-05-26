@@ -22,7 +22,8 @@ const app = initializeApp(firebaseConfig);
 console.log("firebase inicio");
 
 // Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(app);
+
+/* const db = getFirestore(app); */
 
 
 console.log("firebase firestore");
@@ -30,3 +31,16 @@ console.log("firebase firestore");
 
 
 
+export async function addProduct(genero, material, producto, tipo_prenda) {
+  try {
+    const docRef = await addDoc(collection(db, "Botanica"), {
+      genero: genero,
+      material: material,
+      producto: producto,
+      tipo_prenda: tipo_prenda,
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
