@@ -93,7 +93,7 @@ getData().then((a) => {
     filtrado_productos = a
     mostrar(filtrado_productos)
 })*/
-function mostrar(productsList) {
+function mostrar() {
     const productosDestacados = document.getElementById("productos_destacados");
 
     productsList.forEach((producto) => {

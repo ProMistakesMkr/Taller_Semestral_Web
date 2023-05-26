@@ -1,3 +1,4 @@
+import { getProdcuts } from "../../firebase.js";
 import getData from "../../json.js"   
 
 let list = [];
@@ -9,6 +10,7 @@ class firstComponent extends HTMLElement {
     }
     constructor(){
         super();
+        
         this.attachShadow({mode:'open'})
     }
     connectedCallback(){
@@ -50,9 +52,10 @@ render(){
     })
 }
 
-printData () {
-    getData().then((a)=>{list = a
-        this.render()})
+    async printData () {
+
+    list = await getProdcuts()
+    this.render()
     
 }
 
